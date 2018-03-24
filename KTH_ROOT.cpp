@@ -16,14 +16,37 @@ int main()
 	    freopen("output.txt", "w", stdout);
 	#endif
 
-	int i,j,k,len,n,sum,count;
+	ll i,j,k,len,n,sum,count;
 	string str;
-	int t;
+	ll t;
 
 	cin >> t;
 
 	while(t--){
-
+		cin >> n >> k;
+		ll low = 1;
+		ll high = n;
+		ll finalans=-1;
+		if(n>=10000000000){
+			low=1;
+			high=10000000000;
+		}
+		while(low<=high){
+			ll mid=(low+high)/2;
+			ll ans=1;
+			for(i=1;i<=k;i++){
+				ans=ans*mid;
+				if(ans>n){
+					high = mid-1;
+					break;
+				}
+			}
+			if(ans<=n){
+				finalans=mid;
+				low=mid+1;
+			}
+		}
+		cout << finalans << endl;
 	}
 
 
