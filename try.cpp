@@ -7,8 +7,7 @@
 
 using namespace std;
 
-int main()
-{
+int main(){
 	#ifndef ONLINE_JUDGE
 	    // for getting input from input.txt
 	    freopen("input.txt", "r", stdin);
@@ -22,8 +21,7 @@ int main()
 
 	cin >> t;
 
-	while(t--)
-	{
+	while(t--){
 
 	}
 
